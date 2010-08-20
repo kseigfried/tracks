@@ -218,6 +218,26 @@ function enable_rich_interaction(){
       relative_to_root('auto_complete_for_predecessor'),
       {multiple: true,multipleSeparator:','});
 
+  $('input[name=predecessor]:not(.ac_input)').autocomplete(
+      relative_to_root('auto_complete_for_predecessor'),{multiple: false});
+  $('input[class=pred_remove_button]').live('click', function(){
+      $(this).parent().remove();
+  });
+  $('input[class=predecessor_add_button]').live('click', function(){
+      var text = $('input[name=predecessor]').val();
+      if (text.length > 0) {
+        $('ul#predecessor_ul').show();
+        if (text.length > 35) {
+            text = text.substring(0,35)+"...";
+        }
+        var html = $('ul#predecessor_ul').html();
+        var new_li = "<li><input class=\"pred_remove_button\" type=\"button\" value=\"x\"/> "+ text + "</li>";
+        $('ul#predecessor_ul').html(html + new_li);
+        $('input[name=predecessor]').val('');
+        $('input[name=predecessor]').focus();
+      }
+  });
+
   /* have to bind on keypress because of limitataions of live() */
   $('input[name=project_name]').live('keypress', function(){
       $(this).bind('blur', project_defaults);
