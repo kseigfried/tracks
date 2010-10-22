@@ -3,10 +3,10 @@
   <div class="menu_sort"><span class="sort_separator">Sort&nbsp;</span>
     <div class="alpha_sort">
       <%= link_to("Alphabetically", alphabetize_projects_path(:state => state),
-        :class => "alphabetize_link", :title => "Sort these projects alphabetically") %>
+        :id => "#{state}_alphabetize_link", :class => "alphabetize_link", :title => "Sort these projects alphabetically") %>
     </div><span class="sort_separator">&nbsp;|&nbsp;</span><div class="tasks_sort">
       <%= link_to("By number of tasks", actionize_projects_path(:state => state),
-        :class => "actionize_link", :title => "Sort these projects by number of tasks") %>
+        :id => "#{state}_actionize_link", :class => "actionize_link", :title => "Sort these projects by number of tasks") %>
     </div>
   </div>
 
