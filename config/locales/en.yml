@@ -360,7 +360,8 @@ en:
     no_completed_recurring: "Currently there are no completed recurring todos"
     add_new_recurring: "Add a new recurring action"
     recurring_deleted_success: "The recurring action was deleted succesfully."
-    error_deleting_recurring: "There was an error deleting the recurring todo {{description}}"
+    error_deleting_recurring: "There was an error deleting the recurring todo \'{{description}}\'"
+    error_starring_recurring: "Could not toggle the star of recurring todo \'{{description}}\'"
     recurrence_period: "Recurrence period"
     recurrence:
       daily: "Daily"
@@ -400,7 +401,7 @@ en:
     edit: "Edit"
     defer_date_after_due_date: "Defer date is after due date. Please edit and adjust due date before deferring."
     convert_to_project: "Make project"
-    blocked_by: "Blocked by {{predecessors}"
+    blocked_by: "Blocked by {{predecessors}}"
     depends_on: "Depends on"
     pending: "Pending"
     drag_action_title: "Drag onto another action to make it depend on that action"
