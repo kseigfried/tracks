@@ -6,7 +6,7 @@
   activate_pending_todos();
   show_empty_messages();
 <%- else -%>
-  TracksPages.page_notify('error', "There was an error deleting the item #{@todo.description}", 8);
+  TracksPages.page_notify('error', "There was an error deleting the item <%=@todo.description%>", 8);
 <%- end -%>
 
 <% if @saved 
